@@ -88,7 +88,8 @@ Weźmy przykład zbioru danych: **2, 4, 4, 4, 5, 5, 7, 9**
    * \( 4^2 = 16 \)
 
 4. **Oblicz wariancję** (średnią z kwadratów różnic):
-   * \[ \text{Wariancja} = \frac{9 + 1 + 1 + 1 + 0 + 0 + 4 + 16}{8} = \frac{32}{8} = 4 \]
+
+\[ \text{Wariancja} = \frac{9 + 1 + 1 + 1 + 0 + 0 + 4 + 16}{8} = \frac{32}{8} = 4 \]
 
 5. **Oblicz odchylenie standardowe** (pierwiastek kwadratowy z wariancji):
    * \( \text{Odchylenie standardowe} = \sqrt{4} = 2 \)
