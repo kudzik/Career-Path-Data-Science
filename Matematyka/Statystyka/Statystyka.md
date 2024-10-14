@@ -101,4 +101,6 @@ Odchylenie standardowe wynosi **2**, co oznacza, że większość wartości w zb
 
 Odchylenie standardowe to miara, która pomaga zrozumieć, jak bardzo dane są rozproszone wokół średniej. Jest użyteczna w statystyce, gdy chcesz zrozumieć zmienność i niejednorodność danych.
 
-Jeśli potrzebujesz dalszych wyjaśnień lub dodatkowych przykładów, daj mi znać! 😊
+$$
+a^2 + b^2 = c^2
+$$
