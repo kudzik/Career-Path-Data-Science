@@ -39,6 +39,36 @@ Aby skutecznie pracować z tablicami w kontekście AI, warto zrozumieć następu
 
 Tablice to kluczowa struktura danych w AI, służąca do reprezentowania i przetwarzania danych. Zrozumienie podstaw algebry liniowej i rachunku różniczkowego jest niezbędne do efektywnej pracy z tablicami i budowania modeli AI.
 
+## NumPy i Pandas
+
+**NumPy:**
+
+* **Podstawowe narzędzie do obliczeń numerycznych:** NumPy to fundament dla wielu innych bibliotek Pythona, w tym Pandas. Oferuje wydajne operacje na wielowymiarowych tablicach (ndarray), co czyni go idealnym do obliczeń matematycznych, algebry liniowej, analizy Fourierowskiej itp.
+* **Jednorodne dane:** Tablice NumPy przechowują dane tego samego typu (np. same liczby całkowite lub same liczby zmiennoprzecinkowe).
+* **Wydajność:** NumPy jest zoptymalizowany pod kątem wydajności, dzięki czemu operacje na tablicach są bardzo szybkie.
+
+**Pandas:**
+
+* **Narzędzie do analizy i manipulacji danymi:** Pandas jest zbudowany na bazie NumPy i oferuje struktury danych wyższego poziomu, takie jak DataFrame (tabela) i Series (kolumna), które ułatwiają pracę z danymi tabelarycznymi.
+* **Heterogeniczne dane:** DataFrame'y w Pandas mogą przechowywać dane różnych typów w jednej kolumnie (np. liczby, tekst, daty).
+* **Etykiety i indeksy:** Pandas pozwala na etykietowanie wierszy i kolumn, co ułatwia dostęp do danych i ich analizę.
+* **Funkcje do analizy danych:** Pandas oferuje bogaty zestaw funkcji do czyszczenia, przekształcania, analizowania i wizualizacji danych, takich jak grupowanie, agregacja, łączenie tabel itp.
+
+**Podsumowując:**
+
+* NumPy jest bardziej ogólnym narzędziem do obliczeń numerycznych, podczas gdy Pandas specjalizuje się w analizie danych tabelarycznych.
+* NumPy jest bardziej wydajny, ale Pandas oferuje więcej funkcji do manipulacji danymi i ich analizy.
+* Pandas jest zbudowany na bazie NumPy, więc często używa się obu bibliotek razem.
+
+**Analogia:**
+
+Wyobraź sobie, że NumPy to zestaw narzędzi do obróbki drewna, a Pandas to warsztat stolarski. NumPy daje Ci podstawowe narzędzia, takie jak piła, młotek i dłuto, które możesz wykorzystać do różnych zadań. Pandas to warsztat, który oprócz tych narzędzi oferuje również specjalistyczne urządzenia, takie jak strugarka, frezarka i szlifierka, które ułatwiają tworzenie bardziej złożonych mebli.
+
+**Kiedy używać NumPy, a kiedy Pandas?**
+
+* **NumPy:** Jeśli potrzebujesz wykonywać szybkie obliczenia numeryczne na tablicach danych, np. w symulacjach naukowych, uczeniu maszynowym lub przetwarzaniu obrazów.
+* **Pandas:** Jeśli pracujesz z danymi tabelarycznymi i potrzebujesz narzędzi do ich czyszczenia, przekształcania, analizy i wizualizacji, np. w analizie danych, statystyce lub finansach.
+
 ## Tablice w Pythonie i NumPy
 
 Tablice wielowymiarowe w Pythonie i bibliotece NumPy mogą wydawać się na pierwszy rzut oka trudne, ale można je porównać do rzeczy, które spotykamy w codziennym życiu, takich jak **pudełka, szafy czy regały**. Wyobraź sobie, że tablice NumPy to właśnie takie "pudełka", które mogą zawierać inne pudełka (czyli tablice w tablicach) na różnych poziomach. Chodźmy krok po kroku przez przykłady, aby lepiej zrozumieć tę koncepcję.
@@ -60,7 +90,7 @@ print(arr_1d)
 
 **Wyjście:**
 
-```
+```text
 [1 2 3 4 5]
 ```
 
@@ -84,7 +114,7 @@ print(arr_2d)
 
 **Wyjście:**
 
-```
+```text
 [[1 2 3]
  [4 5 6]]
 ```
@@ -172,4 +202,3 @@ print(arr_3d[1, 1, 2])  # Wyjście: 12
 ![Dostęp do tablic](/img/Dostep%20do%20tablic.png)
 
 ## Podstawowe operacje na tablicach
-

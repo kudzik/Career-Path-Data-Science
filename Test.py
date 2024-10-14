@@ -1,7 +1,8 @@
 import numpy as np
+from sympy import true
 
-np.array([1, 2, 3])
+A = np.array([[1, true, 3], [4, 5, 6]])
 
-x = [1, 2, 3]
-y = [num * 2 for num in x]
-print(y)
+
+B = np.random.rand(5)
+print(B)
