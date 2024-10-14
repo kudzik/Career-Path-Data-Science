@@ -1,3 +1,3 @@
-import turtle as t
+import numpy as np
 
-t.forward(100)
+np.linalg.norm()

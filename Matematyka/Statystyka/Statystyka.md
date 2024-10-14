@@ -43,65 +43,66 @@ Mediana to sposób na określenie centralnej wartości w zbiorze danych. Jest sz
 
 ## Odchylenie standardowe
 
-### Odchylenie standardowe — wyjaśnienie
+Aby lepiej zrozumieć odchylenie standardowe, najpierw zdefiniuję to pojęcie i przedstawię przykład obliczenia odchylenia standardowego dla prostego zestawu danych. Następnie pokażę, jak obliczyć odchylenie standardowe w NumPy.
 
-**Odchylenie standardowe** to statystyczna miara, która opisuje, jak bardzo wartości w zbiorze danych różnią się od średniej (średniej arytmetycznej). Mówiąc prościej, odchylenie standardowe wskazuje, jak bardzo dane są rozproszone lub rozciągnięte wokół średniej wartości.
+```python?code_reference&code_event_index=3
+import numpy as np
 
-* **Niskie odchylenie standardowe** oznacza, że większość wartości jest blisko średniej.
-* **Wysokie odchylenie standardowe** wskazuje, że dane są bardziej rozproszone i wartości różnią się znacznie od średniej.
+# Przykładowa tablica
+dane = np.array([2, 4, 6, 8, 10])
 
-### Kroki do obliczenia odchylenia standardowego
+# Obliczenie średniej
+srednia = np.mean(dane)
 
-Przejdźmy przez proces obliczania odchylenia standardowego krok po kroku, aby było to jasne.
+# Obliczenie wariancji
+wariancja = np.var(dane)
 
-1. **Oblicz średnią (średnią arytmetyczną)** zbioru danych.
-2. **Znajdź różnicę** między każdą wartością a średnią.
-3. **Podnieś do kwadratu** każdą z tych różnic.
-4. **Oblicz średnią** z kwadratów różnic (to nazywamy **wariancją**).
-5. **Znajdź pierwiastek kwadratowy** z wariancji — to jest odchylenie standardowe.
+# Obliczenie odchylenia standardowego
+odchylenie_std = np.std(dane)
 
-### Przykład obliczenia odchylenia standardowego
+# Wyświetlenie wyników
+print("Dane:", dane)
+print("Średnia:", srednia)
+print("Wariancja:", wariancja)
+print("Odchylenie standardowe:", odchylenie_std)
+```
 
-Weźmy przykład zbioru danych: **2, 4, 4, 4, 5, 5, 7, 9**
+```text?code_stdout&code_event_index=3
+Dane: [ 2  4  6  8 10]
+Średnia: 6.0
+Wariancja: 8.0
+Odchylenie standardowe: 2.8284271247461903
 
-1. **Oblicz średnią**:
-   * \( \text{Średnia} = \frac{2 + 4 + 4 + 4 + 5 + 5 + 7 + 9}{8} = 5 \)
+```
 
-2. **Oblicz różnice** między każdą wartością a średnią:
-   * \( 2 - 5 = -3 \)
-   * \( 4 - 5 = -1 \)
-   * \( 4 - 5 = -1 \)
-   * \( 4 - 5 = -1 \)
-   * \( 5 - 5 = 0 \)
-   * \( 5 - 5 = 0 \)
-   * \( 7 - 5 = 2 \)
-   * \( 9 - 5 = 4 \)
+Odchylenie standardowe to miara rozproszenia danych wokół średniej. Im większe odchylenie standardowe, tym bardziej rozproszone są dane.
 
-3. **Podnieś do kwadratu** każdą różnicę:
-   * \( (-3)^2 = 9 \)
-   * \( (-1)^2 = 1 \)
-   * \( (-1)^2 = 1 \)
-   * \( (-1)^2 = 1 \)
-   * \( 0^2 = 0 \)
-   * \( 0^2 = 0 \)
-   * \( 2^2 = 4 \)
-   * \( 4^2 = 16 \)
+**Przykład:**
 
-4. **Oblicz wariancję** (średnią z kwadratów różnic):
+Załóżmy, że mamy zestaw danych: 2, 4, 6, 8, 10.
 
-\[ \text{Wariancja} = \frac{9 + 1 + 1 + 1 + 0 + 0 + 4 + 16}{8} = \frac{32}{8} = 4 \]
+1. **Obliczenie średniej:**
+   Średnia arytmetyczna to suma wszystkich wartości podzielona przez ich liczbę: (2 + 4 + 6 + 8 + 10) / 5 = 6
 
-5. **Oblicz odchylenie standardowe** (pierwiastek kwadratowy z wariancji):
-   * \( \text{Odchylenie standardowe} = \sqrt{4} = 2 \)
+2. **Obliczenie wariancji:**
+   Wariancja to średnia arytmetyczna kwadratów odchyleń od średniej:
+   [(2-6)<sup>2</sup> + (4-6)<sup>2</sup> + (6-6)<sup>2</sup> + (8-6)<sup>2</sup> + (10-6)<sup>2</sup>] / 5 = 8
 
-### Interpretacja wyniku
+3. **Obliczenie odchylenia standardowego:**
+   Odchylenie standardowe to pierwiastek kwadratowy z wariancji: √8 ≈ 2.83
 
-Odchylenie standardowe wynosi **2**, co oznacza, że większość wartości w zbiorze danych różni się od średniej o około 2 jednostki.
+**Obliczanie odchylenia standardowego w NumPy:**
 
-### Podsumowanie
+W NumPy możemy obliczyć odchylenie standardowe za pomocą funkcji `np.std()`:
 
-Odchylenie standardowe to miara, która pomaga zrozumieć, jak bardzo dane są rozproszone wokół średniej. Jest użyteczna w statystyce, gdy chcesz zrozumieć zmienność i niejednorodność danych.
+```python
+import numpy as np
 
-$$
-a^2 + b^2 = c^2
-$$
+dane = np.array([2, 4, 6, 8, 10])
+odchylenie_std = np.std(dane)
+print(odchylenie_std)  # Wynik: 2.8284271247461903
+```
+
+**Podsumowanie:**
+
+Odchylenie standardowe to ważna miara statystyczna, która informuje nas o tym, jak bardzo dane są rozproszone wokół średniej. NumPy udostępnia funkcję `np.std()`, która pozwala na łatwe obliczenie odchylenia standardowego dla tablic NumPy.

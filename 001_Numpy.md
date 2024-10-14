@@ -593,3 +593,9 @@ MinValue = A[np.argmin(A)] // Zwraca wartość najmniejszej
 ArgSort = np.argsort(A) // Zwraca indeksy posortowane według najwiekszych wartości
 
 ```
+
+## Iteracja po tablicach
+
+```python
+
+```
