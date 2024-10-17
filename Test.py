@@ -1,4 +1,8 @@
-import numpy as np
+from datetime import datetime
 
-result = np.log(1 / 64) / np.log(2)
-print(result)
+
+birthday = datetime(1983, 2, 7, 0, 0, 0)
+diff = datetime.today() - birthday
+
+
+print(diff.days)
