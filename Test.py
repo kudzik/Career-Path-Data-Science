@@ -1,5 +1,4 @@
-import plotly_express as px
+import numpy as np
 
-df = px.data.iris()
-df.head()
-px.scatter(data_frame=df, x="sepal_length", y="sepal_width", color="species")
+result = np.log(1 / 64) / np.log(2)
+print(result)

@@ -106,3 +106,83 @@ print(odchylenie_std)  # Wynik: 2.8284271247461903
 **Podsumowanie:**
 
 Odchylenie standardowe to ważna miara statystyczna, która informuje nas o tym, jak bardzo dane są rozproszone wokół średniej. NumPy udostępnia funkcję `np.std()`, która pozwala na łatwe obliczenie odchylenia standardowego dla tablic NumPy.
+
+## Statystyka opisowa
+
+Statystyka opisowa to dział statystyki, który zajmuje się opisem i podsumowaniem danych. Używa się jej do przedstawienia charakterystyki zbioru danych za pomocą tabel, wykresów i miar statystycznych, takich jak średnia, mediana, odchylenie standardowe itp.
+
+**Wyobraź sobie:**
+
+Masz wyniki testu z matematyki całej klasy. Statystyka opisowa pozwoli Ci na:
+
+* **Uporządkowanie danych:** Możesz stworzyć tabelę z wynikami, posortować je rosnąco lub malejąco.
+* **Obliczenie miar statystycznych:** Możesz obliczyć średnią ocenę, medianę, odchylenie standardowe, aby dowiedzieć się, jak  ogólnie  klasa napisała test i jak bardzo wyniki się różnią.
+* **Wizualizację danych:** Możesz narysować histogram, aby zobaczyć rozkład ocen,  lub wykres pudełkowy, aby porównać wyniki  z  wynikami  innych klas.
+
+**Podstawowe miary statystyczne:**
+
+* **Miary tendencji centralnej:**  Średnia, mediana, moda –  pokazują,  wokół  jakiej  wartości  skupiają się dane.
+
+  * Średnia to suma wszystkich wartości podzielona przez ich liczbę.
+  * Mediana to wartość środkowa w uporządkowanym zbiorze danych. Jeśli zbiór ma parzystą liczbę elementów, mediana jest średnią arytmetyczną dwóch środkowych wartości.
+  * Moda to wartość, która występuje najczęściej w zbiorze danych.
+
+* **Miary rozproszenia:**  Odchylenie standardowe, wariancja, rozstęp –  pokazują, jak bardzo dane  są  rozrzucone.
+
+  * Odchylenie standardowe to pierwiastek kwadratowy z wariancji. Jest to najczęściej używana miara rozproszenia. Im większe odchylenie standardowe, tym bardziej dane są rozrzucone.
+  * Wariancja to średnia arytmetyczna kwadratów odchyleń od średniej. Jest to miara mniej intuicyjna niż odchylenie standardowe, ale ma pewne zastosowania w statystyce.
+  * Rozstęp to różnica między największą a najmniejszą wartością w zbiorze danych. Jest to najprostsza miara rozproszenia, ale jest wrażliwa na wartości odstające.
+
+* **Miary kształtu:**  Skośność, kurtoza –  opisują  kształt  rozkładu  danych.
+
+  * Skośność mierzy asymetrię rozkładu.
+
+    * Skośność dodatnia: Ogon rozkładu jest dłuższy po prawej stronie (więcej wartości po prawej stronie średniej).
+    * Skośność ujemna: Ogon rozkładu jest dłuższy po lewej stronie (więcej wartości po lewej stronie średniej).
+    * Skośność zerowa: Rozkład jest symetryczny.
+
+  * Kurtoza mierzy "spiczastość" rozkładu.
+
+    * Kurtoza dodatnia: Rozkład jest bardziej spiczasty niż rozkład normalny (więcej wartości skupionych wokół średniej i w ogonach).
+    * Kurtoza ujemna: Rozkład jest bardziej płaski niż rozkład normalny (mniej wartości skupionych wokół średniej i w ogonach).
+    * Kurtoza zerowa: Rozkład ma podobną spiczastość jak rozkład normalny.
+
+**Zastosowania:**
+
+Statystyka opisowa jest  używana  w  wielu  dziedzinach,  np.:
+
+* **Biznes:**  Analiza  sprzedaży,  badania  rynku.
+* **Nauka:**  Analiza  wyników  eksperymentów.
+* **Medycyna:**  Analiza  danych  pacjentów.
+
+```python
+import numpy as np
+from scipy import stats
+
+# Przykładowe dane
+dane = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+# Obliczenie średniej
+srednia = np.mean(dane)
+print(f"Średnia: {srednia}")
+
+# Obliczenie mediany
+mediana = np.median(dane)
+print(f"Mediana: {mediana}")
+
+# Obliczenie mody
+moda = stats.mode(dane)
+
+# Obliczenie odchylenia standardowego
+odchylenie_std = np.std(dane)
+print(f"Odchylenie standardowe: {odchylenie_std}")
+
+# Przykładowe dane
+dane = np.array([1, 2, 2, 3, 3, 3, 4, 4, 5, 10])
+
+# Obliczenie skośności
+skosnosc = stats.skew(dane)
+
+# Obliczenie kurtozy
+kurtoza = stats.kurtosis(dane)
+```

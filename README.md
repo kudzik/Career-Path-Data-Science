@@ -201,4 +201,82 @@ print(arr_3d[1, 1, 2])  # Wyjście: 12
 
 ![Dostęp do tablic](/img/Dostep%20do%20tablic.png)
 
-## Podstawowe operacje na tablicach
+## Uczenie maszynowe
+
+Uczenie maszynowe to dziedzina sztucznej inteligencji, która umożliwia komputerom uczenie się na podstawie danych bez jawnego programowania. Innymi słowy, algorytmy uczenia maszynowego "uczą się" na podstawie przykładów, a następnie wykorzystują zdobytą wiedzę do przewidywania i podejmowania decyzji.
+
+**Rodzaje uczenia maszynowego:**
+
+* **Uczenie nadzorowane:** Model uczy się na podstawie danych wejściowych i odpowiadających im etykiet (np. klasyfikacja obrazów).
+* **Uczenie nienadzorowane:** Model uczy się na podstawie danych wejściowych bez etykiet (np. grupowanie klientów).
+* **Uczenie ze wzmocnieniem:** Model uczy się poprzez interakcję ze środowiskiem i otrzymywanie nagród lub kar (np. gra w szachy).
+
+**Etapy uczenia maszynowego:**
+
+1. **Zbieranie danych:** Pozyskanie danych niezbędnych do trenowania modelu.
+2. **Przygotowanie danych:** Czyszczenie, transformacja i inżynieria cech.
+3. **Wybór modelu:** Dobór odpowiedniego algorytmu do danego problemu.
+4. **Trenowanie modelu:** Dopasowanie modelu do danych treningowych.
+5. **Ewaluacja modelu:** Ocena wydajności modelu na danych testowych.
+6. **Strojenie hiperparametrów:** Optymalizacja modelu w celu poprawy wydajności.
+7. **Wdrożenie modelu:** Użycie modelu do przewidywania na nowych danych.
+
+**Przykłady zastosowań:**
+
+* **Rozpoznawanie obrazów:** Klasyfikacja obrazów, wykrywanie obiektów.
+* **Przetwarzanie języka naturalnego:** Analiza tekstu, tłumaczenie maszynowe.
+* **Systemy rekomendacyjne:** Rekomendowanie produktów lub usług.
+* **Predykcja:** Prognozowanie cen, wykrywanie oszustw.
+
+**Algorytmy:**
+
+* **Regresja liniowa:** Przewidywanie wartości ciągłych.
+* **Drzewa decyzyjne:** Klasyfikacja i regresja na podstawie serii decyzji.
+* **Maszyny wektorów nośnych (SVM):** Klasyfikacja danych na podstawie hiperpłaszczyzny.
+* **Klastrowanie k-średnich:** Grupowanie danych w klastry.
+
+### Uczenie nadzorowane
+
+Uczenie nadzorowane to jeden z głównych typów uczenia maszynowego, w którym model uczy się na podstawie danych wejściowych i odpowiadających im etykiet. Można to porównać do nauki z podręcznikiem, gdzie mamy zadania i odpowiedzi do nich. Model analizuje przykłady i uczy się przewidywać etykiety dla nowych, nieznanych danych.
+
+**Przykład:**
+
+Wyobraź sobie, że chcesz nauczyć komputer rozpoznawać zdjęcia kotów i psów. W uczeniu nadzorowanym dostarczysz mu zestaw zdjęć, gdzie każde zdjęcie będzie miało etykietę "kot" lub "pies". Algorytm przeanalizuje zdjęcia i nauczy się rozpoznawać cechy charakterystyczne dla kotów i psów (np. kształt uszu, nosa, ogona). Po nauczeniu, model będzie mógł  przewidywać etykiety ("kot" lub "pies") dla nowych zdjęć, których wcześniej nie widział.
+
+**Typy problemów:**
+
+Uczenie nadzorowane  można podzielić na dwa główne typy problemów:
+
+* **Klasyfikacja:**  przypisywanie danych do jednej z kilku predefiniowanych klas (np. kot, pies, ptak).
+* **Regresja:**  przewidywanie wartości ciągłej (np. cena domu, temperatura).
+
+**Algorytmy:**
+
+Istnieje wiele algorytmów uczenia nadzorowanego, m.in.:
+
+* Regresja liniowa
+* Regresja logistyczna
+* Drzewa decyzyjne
+* Maszyny wektorów nośnych (SVM)
+* Naiwny klasyfikator Bayesa
+* Sieci neuronowe
+
+**Zastosowania:**
+
+Uczenie nadzorowane ma szerokie zastosowanie w wielu dziedzinach, np.:
+
+* Rozpoznawanie obrazów
+* Przetwarzanie języka naturalnego
+* Analiza danych finansowych
+* Diagnostyka medyczna
+* Prognozowanie pogody
+
+**Zalety:**
+
+* Wysoka dokładność predykcji
+* Możliwość uczenia się złożonych zależności
+
+**Wady:**
+
+* Wymaga dużej ilości danych z etykietami
+* Może być podatne na przeuczenie (overfitting)
